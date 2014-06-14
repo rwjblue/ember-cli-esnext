@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-esnext",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Use esnext to preprocess your ember-cli app's files.",
   "main": "index.js",
   "scripts": {
