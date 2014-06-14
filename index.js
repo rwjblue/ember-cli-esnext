@@ -5,7 +5,7 @@ var fs     = require('fs');
 var esNext = require('broccoli-esnext');
 
 function ESNextPlugin(options) {
-  this.name = 'esnext';
+  this.name = 'ember-cli-esnext';
   this.ext = 'js';
   this.options = options || {};
 }
@@ -29,7 +29,6 @@ EmberCLIESNext.prototype.included = function included(app) {
   var plugin = new ESNextPlugin(this.app.options.esnextOptions);
 
   registry.add('js', plugin);
-  registry.availablePlugins['esnext'] = true;
 };
 
 module.exports = EmberCLIESNext;
