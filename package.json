@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-esnext",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Use esnext to preprocess your ember-cli app's files.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "Robert Jackson <robert.w.jackson@me.com>",
   "license": "MIT",
   "dependencies": {
-    "broccoli-esnext": "~0.1.1"
+    "broccoli-esnext": "~0.2.0"
   },
   "repository": {
     "type": "git",
