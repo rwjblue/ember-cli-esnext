@@ -10,6 +10,9 @@ From within your Ember CLI application (must be > 0.0.34), run the following:
 npm install --save-dev ember-cli-esnext
 ```
 
+That's all. You can now use ES6 syntax supported by `esnext` in your `.js`
+files.
+
 ### References
 
 * [esnext](https://github.com/square/esnext)
