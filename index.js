@@ -1,34 +1,18 @@
 'use strict';
 
-var path   = require('path');
-var fs     = require('fs');
 var esNext = require('broccoli-esnext');
 
-function ESNextPlugin(options) {
-  this.name = 'ember-cli-esnext';
-  this.ext = 'js';
-  this.options = options || {};
-}
+module.exports = {
+  name: 'ember-cli-esnext',
+  included: function(app) {
+    this._super.included.apply(this, arguments);
 
-ESNextPlugin.prototype.toTree = function(tree) {
-  return esNext(tree, this.options);
+    app.registry.add('js', {
+      name: 'ember-cli-esnext',
+      ext: 'js',
+      toTree: function(tree) {
+        return esNext(tree, app.options.esnextOptions);
+      }
+    });
+  }
 };
-
-function EmberCLIESNext(project) {
-  this.project = project;
-  this.name    = 'Ember CLI ESNext';
-}
-
-EmberCLIESNext.prototype.treeFor = function treeFor() {
-};
-
-EmberCLIESNext.prototype.included = function included(app) {
-  var registry = app.registry;
-  this.app = app;
-
-  var plugin = new ESNextPlugin(this.app.options.esnextOptions);
-
-  registry.add('js', plugin);
-};
-
-module.exports = EmberCLIESNext;
