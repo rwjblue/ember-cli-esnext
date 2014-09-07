@@ -7,7 +7,9 @@ module.exports = {
   included: function(app) {
     this._super.included.apply(this, arguments);
 
-    app.registry.add('js', {
+    app.registry.registry[type] = app.registry.registry[type] || [];
+
+    app.registry.registry[type].unshift({
       name: 'ember-cli-esnext',
       ext: 'js',
       toTree: function(tree) {
