@@ -1,3 +1,5 @@
+:warning: This addon is deprecated in favor of https://github.com/babel/ember-cli-babel :warning:
+
 ## ember-cli-esnext
 
 This addon inserts adds `esnext` processing into the javascript preprocessor for Ember CLI.
