@@ -12,7 +12,9 @@
   "author": "Robert Jackson <robert.w.jackson@me.com>",
   "license": "MIT",
   "dependencies": {
-    "broccoli-esnext": "~0.5.0"
+    "broccoli-esnext": "~0.5.0",
+    "broccoli-static-compiler": "^0.2.1",
+    "regenerator": "^0.8.0"
   },
   "repository": {
     "type": "git",
